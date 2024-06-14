@@ -11,7 +11,7 @@
                             <img src=" {{ $comic->thumb }} " class="img-fluid" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"> {{ $comic->title }} </h5>
-                                <a href="#" class="btn btn-primary">Comic Details</a>
+                                <a href="{{route('comics.show', ['comic' => $comic->id])}}" class="btn btn-primary">Comic Details</a>
                             </div>
                         </div>
                     </div>

@@ -109,4 +109,13 @@ return [
         "sale_date" => "2019-04-10",
         "type" => "graphic novel",
     ],
+    [
+        "title" => "http://127.0.0.1:8000/comics/create",
+        "description" => "Un libro per imparare a giocare a scacchi e per imparare nuove aperture e sviluppi in gioco",
+        "thumb" => "https://i.ebayimg.com/images/g/4HwAAOSw2QRkDK1M/s-l500.jpg",
+        "price" => "€38.50",
+        "series" => "No Series",
+        "sale_date" => "2015-05-11",
+        "type" => "Book",
+    ],
 ];

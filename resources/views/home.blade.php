@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Home page</h1>
+    <div class="container py-2">
+        <img src="{{ Vite::asset('resources/img/dc_universe.png')}}"  class="img-fluid w-100 p-2"  alt="">
+    </div>
 @endsection

@@ -17,7 +17,7 @@
                                 <form action="{{ route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger" type="submit">Elimina</button>
+                                    <button class="btn btn-danger" id="delete" type="submit" onclick="return confirm('Are you sure? CRITICAL ACTION')">Delete</button>
                                 </form>
                             </div>
                         </div>
@@ -26,4 +26,5 @@
             </div>
         </div>
     </section>
-@endsection
+    @endsection
+    

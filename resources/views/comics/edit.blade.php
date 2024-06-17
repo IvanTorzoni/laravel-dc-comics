@@ -5,7 +5,7 @@
 
         <h1 class="py-5 text-center">Pagina di edit</h1>
 
-        <form action="{{ route('comics.update', ['comic' => $comic->id])}}" method="POST>
+        <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST>
             @csrf
             @method('PUT')
 

@@ -38,6 +38,14 @@ class ComicController extends Controller
             'series' => 'required',
             'sale_date' => 'required',
             'type' => 'required',
+        ], [
+            'title.required' => 'Il campo del titolo non può essere vuoto',
+            'description.required' => 'Il campo della descrizione non può essere vuoto e deve contenere almeno 10 caratteri',
+            'thumb.required' => 'Il campo di inserimento del link immagine non può essere vuoto',
+            'price.required' => 'Il campo del prezzo non può essere vuoto',
+            'series.required' => 'Il campo della serie non può essere vuoto',
+            'sale_date.required' => 'Il campo della data non può essere vuoto',
+            'type.required' => 'Il campo del titolo non può essere vuoto',
         ]);
         $comicsData = $request->all();
         $comic = new Comic();

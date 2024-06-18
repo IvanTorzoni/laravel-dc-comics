@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -28,25 +29,8 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required|min:10',
-            'thumb' => 'required',
-            'price' => 'required',
-            'series' => 'required',
-            'sale_date' => 'required',
-            'type' => 'required',
-        ], [
-            'title.required' => 'Il campo del titolo non può essere vuoto',
-            'description.required' => 'Il campo della descrizione non può essere vuoto e deve contenere almeno 10 caratteri',
-            'thumb.required' => 'Il campo di inserimento del link immagine non può essere vuoto',
-            'price.required' => 'Il campo del prezzo non può essere vuoto',
-            'series.required' => 'Il campo della serie non può essere vuoto',
-            'sale_date.required' => 'Il campo della data non può essere vuoto',
-            'type.required' => 'Il campo del titolo non può essere vuoto',
-        ]);
         $comicsData = $request->all();
         $comic = new Comic();
         $comic->fill($comicsData);
